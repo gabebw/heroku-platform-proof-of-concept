@@ -16,11 +16,15 @@ You need zsh and [jq]. On OS X you can do `brew install jq`.
 
 Find your Heroku token by running `heroku auth:token`.
 
-Let's say your token is `abc123`. Then run the script like this:
+Let's say your token is `abc123`. Then run the `deploy-via-app-json.zsh` script
+like this:
 
 ```
-HEROKU_TOKEN=abc123 APP_NAME=whatever-you-want ./deploy-a-url-shortener.zsh
+HEROKU_TOKEN=abc123 APP_NAME=whatever-you-want ./deploy-via-app-json.zsh
 ```
+
+The `deploy-a-url-shortener.zsh` script is much more manual and doesn't let  you
+Ctrl-C out of it.
 
 It will create an app named `$APP_NAME` and deploy
 https://github.com/gabebw/crumple (a URL shortener) to it.
